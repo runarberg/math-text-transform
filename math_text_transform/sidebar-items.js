@@ -1,0 +1,1 @@
+initSidebarItems({"trait":[["MathTextTransform","Convenience trait that allows you to call the the transformation straight on a string slice. If a variant doesn't exist for a given character, it is left as is."]]});

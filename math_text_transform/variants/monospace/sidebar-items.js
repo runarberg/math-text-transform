@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["math_monospace","Transform a character to it's mathematical monospace equivalent."]]});

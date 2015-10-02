@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["math_fraktur","Transform a character to it's mathematical fraktur equivalent."]]});

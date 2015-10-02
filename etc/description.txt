@@ -1,3 +1,0 @@
-Description:
-    Transform greek, latin and decimal symbols to a certain
-    variant in the mathematical alphanumerical Unicode block.

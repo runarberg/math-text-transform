@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `MathTextTransform` trait in crate `math_text_transform`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, MathTextTransform">
+
+    <title>math_text_transform::MathTextTransform - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>math_text_transform</a></p><script>window.sidebarCurrent = {name: 'MathTextTransform', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='index.html'>math_text_transform</a>::<wbr><a class='trait' href=''>MathTextTransform</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-5302' class='srclink' href='../src/math_text_transform/lib.rs.html#62-101' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait MathTextTransform&lt;T&gt; {
+    fn <a href='#tymethod.to_math_bold' class='fnname'>to_math_bold</a>(&amp;self) -&gt; T;
+    fn <a href='#tymethod.to_math_italic' class='fnname'>to_math_italic</a>(&amp;self) -&gt; T;
+    fn <a href='#tymethod.to_math_bold_italic' class='fnname'>to_math_bold_italic</a>(&amp;self) -&gt; T;
+    fn <a href='#tymethod.to_math_sans_serif' class='fnname'>to_math_sans_serif</a>(&amp;self) -&gt; T;
+    fn <a href='#tymethod.to_math_sans_serif_bold' class='fnname'>to_math_sans_serif_bold</a>(&amp;self) -&gt; T;
+    fn <a href='#tymethod.to_math_sans_serif_italic' class='fnname'>to_math_sans_serif_italic</a>(&amp;self) -&gt; T;
+    fn <a href='#tymethod.to_math_sans_serif_bold_italic' class='fnname'>to_math_sans_serif_bold_italic</a>(&amp;self) -&gt; T;
+    fn <a href='#tymethod.to_math_script' class='fnname'>to_math_script</a>(&amp;self) -&gt; T;
+    fn <a href='#tymethod.to_math_bold_script' class='fnname'>to_math_bold_script</a>(&amp;self) -&gt; T;
+    fn <a href='#tymethod.to_math_fraktur' class='fnname'>to_math_fraktur</a>(&amp;self) -&gt; T;
+    fn <a href='#tymethod.to_math_bold_fraktur' class='fnname'>to_math_bold_fraktur</a>(&amp;self) -&gt; T;
+    fn <a href='#tymethod.to_math_monospace' class='fnname'>to_math_monospace</a>(&amp;self) -&gt; T;
+    fn <a href='#tymethod.to_math_double_struck' class='fnname'>to_math_double_struck</a>(&amp;self) -&gt; T;
+}</pre><div class='docblock'><p>Convenience trait that allows you to call the the transformation
+straight on a string slice. If a variant doesn&#39;t exist for a given
+character, it is left as is.</p>
+
+<h3 id="examples" class='section-header'><a
+                           href="#examples">Examples</a></h3><pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>math_text_transform</span>::<span class='ident'>MathTextTransform</span>;
+
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='string'>&quot;Italıc f(π)&quot;</span>.<span class='ident'>to_math_italic</span>(), <span class='string'>&quot;𝐼𝑡𝑎𝑙𝚤𝑐 𝑓(𝜋)&quot;</span>);
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='string'>&quot;Double-struck 123&quot;</span>.<span class='ident'>to_math_double_struck</span>(), <span class='string'>&quot;𝔻𝕠𝕦𝕓𝕝𝕖-𝕤𝕥𝕣𝕦𝕔𝕜 𝟙𝟚𝟛&quot;</span>);</pre>
+</div>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.to_math_bold' class='method stab '><code>fn <a href='#tymethod.to_math_bold' class='fnname'>to_math_bold</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝐛𝐨𝐥𝐝 variant.</p>
+</div><h3 id='tymethod.to_math_italic' class='method stab '><code>fn <a href='#tymethod.to_math_italic' class='fnname'>to_math_italic</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝑖𝑡𝑎𝑙𝑖𝑐 variant.</p>
+</div><h3 id='tymethod.to_math_bold_italic' class='method stab '><code>fn <a href='#tymethod.to_math_bold_italic' class='fnname'>to_math_bold_italic</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝒃𝒐𝒍𝒅 𝒊𝒕𝒂𝒍𝒊𝒄 variant.</p>
+</div><h3 id='tymethod.to_math_sans_serif' class='method stab '><code>fn <a href='#tymethod.to_math_sans_serif' class='fnname'>to_math_sans_serif</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝗌𝖺𝗇𝗌-𝗌𝖾𝗋𝗂𝖿 variant.</p>
+</div><h3 id='tymethod.to_math_sans_serif_bold' class='method stab '><code>fn <a href='#tymethod.to_math_sans_serif_bold' class='fnname'>to_math_sans_serif_bold</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝘀𝗮𝗻𝘀-𝘀𝗲𝗿𝗶𝗳 𝗯𝗼𝗹𝗱 variant.</p>
+</div><h3 id='tymethod.to_math_sans_serif_italic' class='method stab '><code>fn <a href='#tymethod.to_math_sans_serif_italic' class='fnname'>to_math_sans_serif_italic</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝘴𝘢𝘯𝘴-𝘴𝘦𝘳𝘪𝘧 𝘪𝘵𝘢𝘭𝘪𝘤 variant.</p>
+</div><h3 id='tymethod.to_math_sans_serif_bold_italic' class='method stab '><code>fn <a href='#tymethod.to_math_sans_serif_bold_italic' class='fnname'>to_math_sans_serif_bold_italic</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝙨𝙖𝙣𝙨-𝙨𝙚𝙧𝙞𝙛 𝙗𝙤𝙡𝙙 𝙞𝙩𝙖𝙡𝙞𝙘 variant.</p>
+</div><h3 id='tymethod.to_math_script' class='method stab '><code>fn <a href='#tymethod.to_math_script' class='fnname'>to_math_script</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝓈𝒸𝓇𝒾𝓅𝓉 variant.</p>
+</div><h3 id='tymethod.to_math_bold_script' class='method stab '><code>fn <a href='#tymethod.to_math_bold_script' class='fnname'>to_math_bold_script</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝓫𝓸𝓵𝓭 𝓼𝓬𝓻𝓲𝓹𝓽 variant.</p>
+</div><h3 id='tymethod.to_math_fraktur' class='method stab '><code>fn <a href='#tymethod.to_math_fraktur' class='fnname'>to_math_fraktur</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝔣𝔯𝔞𝔨𝔱𝔲𝔯 variant.</p>
+</div><h3 id='tymethod.to_math_bold_fraktur' class='method stab '><code>fn <a href='#tymethod.to_math_bold_fraktur' class='fnname'>to_math_bold_fraktur</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝖇𝖔𝖑𝖉 𝖋𝖗𝖆𝖐𝖙𝖚𝖗 variant.</p>
+</div><h3 id='tymethod.to_math_monospace' class='method stab '><code>fn <a href='#tymethod.to_math_monospace' class='fnname'>to_math_monospace</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝚖𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎 variant.</p>
+</div><h3 id='tymethod.to_math_double_struck' class='method stab '><code>fn <a href='#tymethod.to_math_double_struck' class='fnname'>to_math_double_struck</a>(&amp;self) -&gt; T</code></h3><div class='docblock'><p>Transform to 𝕕𝕠𝕦𝕓𝕝𝕖-𝕤𝕥𝕣𝕦𝕔𝕜 variant.</p>
+</div></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl <a class='trait' href='../math_text_transform/trait.MathTextTransform.html' title='math_text_transform::MathTextTransform'>MathTextTransform</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt; for <a href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></li>
+</ul><script type="text/javascript" async
+                              src="../implementors/math_text_transform/trait.MathTextTransform.js">
+                      </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "math_text_transform";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

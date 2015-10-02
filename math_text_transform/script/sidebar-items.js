@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["math_script","Transform a character to it's mathematical script equivalent."]]});

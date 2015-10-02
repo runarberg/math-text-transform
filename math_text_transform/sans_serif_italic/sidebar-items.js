@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["math_sans_serif_italic","Transform a character to it's mathematical sans-serif italic equivalent."]]});

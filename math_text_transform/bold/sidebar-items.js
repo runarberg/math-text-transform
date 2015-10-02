@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["math_bold","Transform a character to it's mathematical bold equivalent."]]});
