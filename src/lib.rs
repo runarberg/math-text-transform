@@ -1,4 +1,4 @@
-//! Transformer text from standard alphanumerical characters to it’s
+//! Transform text from standard alphanumerical characters to it’s
 //! unicode equivalents of a certain variant in the [mathematical
 //! alphanumeric symbols block][1] (code block U+1D400–U+1D7FF).
 //!

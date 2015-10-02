@@ -1,6 +1,9 @@
 Math Text Transform
 ===================
 
+![Travis build](https://img.shields.io/travis/runarberg/math-text-transform.svg)
+![crates.io](https://img.shields.io/crates/v/math-text-transform.svg)
+
 A simple crate that provides functions to map a greek letter, latin
 letter, or a decimal digit to a certain variant from the mathematical
 alphanumeric symbols Unicode block (U+1D400–U+1D7FF). We also provide
