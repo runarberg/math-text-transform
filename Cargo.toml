@@ -1,12 +1,16 @@
 [package]
 
 name = "math-text-transform"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["runarberg <runarberg@zoho.com>"]
 
 license = "MIT"
 keywords = ["text", "unicode", "math", "typesetting"]
 readme = "README.md"
+documentation = "http://runarberg.github.io/math-text-transform/"
+
+homepage = "https://github.com/runarberg/math-text-transform"
+repository = "https://github.com/runarberg/math-text-transform.git"
 
 description = """
 Transform greek letters, latin letters, or decimal digits into
@@ -14,6 +18,7 @@ certain variants from the mathematical alphanumeric symbols
 Unicode block (U+1D400–U+1D7FF). For example to bold, italic,
 script or double-struck.
 """
+
 
 [[bin]]
 
