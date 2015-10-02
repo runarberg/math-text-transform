@@ -1,0 +1,15 @@
+Variant must be one of:
+    -bf        --bold
+    -it        --italic
+    -bf-it     --bold-italic
+    -sf        --sans-serif
+    -sf-bf     --sans-serif-bold
+    -sf-it     --sans-serif-italic
+    -sf-bf-it  --sans-serif-bold-italic
+    -cc        --script
+    -bf-cc     --bold-script
+    -fr        --fraktur
+    -bf-fr     --bold-fraktur
+    -tt        --monospace
+    -bb        --double-struck
+    -h         --help

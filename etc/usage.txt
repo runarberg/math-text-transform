@@ -1,0 +1,3 @@
+Usage:
+    math-text-transform <variant> <text>
+    math-text-transform <variant> < `stdin`
